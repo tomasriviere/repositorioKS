@@ -3,15 +3,64 @@
     box-sizing: border-box;
 }
 .header {
-    background: linear-gradient(to bottom, #7A7873 10%, #C3BFB8); 
-    text-decoration: none;
+    background: linear-gradient(to bottom, #7A7873 10%, #C3BFB8);
     position: sticky;
     top: 20px;
     font-size: medium;
     font-style: oblique;
     margin: 50px;
+    padding: 5px;
     border: black solid;
+    text-decoration-color: black;
     justify-content: center space-between;
+    z-index:1;
+}
+
+.menu{
+    background-color: #FBDAA0;
+    display: flex;
+    padding: 5px;
+    margin: 10px;
+    justify-content: center;
+    list-style-type: none;
+    word-spacing: 8pt;
+    text-indent: 28pt;
+}
+
+a:link{
+    text-decoration: none!important;
+    text-decoration-color: black;
+  } 
+
+  @media (max-width: 800px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        background: transparent
+    }
+
+    .menu {
+        display: flex;
+        width: 100%;
+    }
+
+    .menu ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .menu ul li {
+        text-align: center;
+    }
+
+    .menu ul li a {
+        padding: .2rem 1rem;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 #body{
@@ -53,14 +102,15 @@
     height: 30px;
 }
 
-.menu{
-    background-color: #FBDAA0;
-    text-decoration: none;
-    display: flex;
-    padding: 5px;
-    margin: 10px;
-    justify-content: center;
-    list-style-type: none
+
+#carouselExampleCaptions .carousel-item img {
+    display: grid;
+    position: static;
+    object-fit: cover;
+    object-position: center;
+    height: 50vh;
+    overflow: hidden;
+    padding: 10px;
 }
 
 
@@ -79,8 +129,8 @@
 .main img{
     width: 300px;
     height: 300px;
-    margin: 10px;
-    padding: 10px;
+    margin: 5px;
+    padding: 5px;
     border: black solid;
     flex-direction: row;
 }
@@ -101,19 +151,28 @@
     grid-row: 1/2;
     flex-direction: row wrap;
     justify-content: right;
+    margin: 10px;
+    padding: 10px;
 }
 
 .mapa{
     background-color: #c3bfb8;
     border: 5px solid;
+    margin: 10px;
+    padding: 10px;
     width: 300px; 
     height: 300px; 
 }
 
-@media screen and (min-width: 480px) and (max-width: 768px) {
-    .main{
-        background-color: #c3bfb8;
-        display: grid;
+@media (max-width: 800px) {
+    .main {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .donde-encontranos {
+        flex-direction: column;
+        display: flex;
     }
 }
 
