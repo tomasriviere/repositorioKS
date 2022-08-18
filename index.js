@@ -1,6 +1,5 @@
 const comprar = []
 const diseños = []
-const comprar = []
 let pisos = 0
 let cairel = 0
 let l = 0
@@ -12,7 +11,7 @@ let totalPrice = 0
 class Product{
     constructor(order, lampara, price){
         this.order = order
-        this.cloth = lampara
+        this.diseños = lampara
         this.price = price
     }
 }
@@ -53,7 +52,7 @@ function carrito(){
     let pisos = parseInt(prompt("ingrese la cantidad de pisos de su lampara"))
     let totalMts = width * pisos
     let precioTotal = diseños[l].price * totalMts
-       comprar.push(new Carro(lamparas, width, height, pisos, price))
+       comprar.push(new Carro(lamparas, width, pisos, price))
        console.table(comprar)
 }
 
@@ -61,3 +60,17 @@ for(let t = 0;  t < comprar.length; t++){
     totalPrice = comprar[t].price + totalPrice
 }
 alert("deberas abonar $: " + totalPrice)
+
+menu.addEventListener("mouseover", () => {
+    menu.className = "colorgris"
+})
+
+window.onscroll = (() => {
+    debugger
+    const navScroll = document.querySelector("nav")
+    if (window.scrollY > 30) {
+      navScroll.className = "opacity"
+    } else {
+      navScroll.className = ""
+    }
+  });
